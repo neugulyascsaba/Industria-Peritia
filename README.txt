@@ -1,7 +1,9 @@
 
 SZÍNFELISMERŐ PROGRAM
 
-INDUSTRIA PERITIA ©
+BMSZC Neumann Informatikai Technikum
+
+INDUSTRIA PERITIA
 Bodó Sándor, Kármán Szabolcs, Gulyás Csaba
 
 -----------------
