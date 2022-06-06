@@ -1,18 +1,20 @@
 
 import cv2
-import numpy as np
+#import numpy as np
 
-import os
-import time
+#import os
+#import time
 from PIL import Image, ImageFilter, ImageEnhance
 
-from matplotlib.colors import cnames
+#from matplotlib.colors import cnames
 import pandas
 
 
 #
 
-fileName = "b.png"
+print("\nINDUSTRIA PERITIA ©\nSzínfelismerő Program")
+
+fileName = input("\nFile neve: ")
 
 #
 
@@ -31,7 +33,7 @@ newImage = Image.open("temp\\" + "_" + fileName)
 
 #
 
-cv2.waitKey(0)
+# cv2.waitKey(0)
 cv2.destroyAllWindows()
 
 #
@@ -41,7 +43,7 @@ cv2.imshow("Feljavitott kep", img_base)
 
 #
 
-cv2.waitKey(0)
+# cv2.waitKey(0)
 cv2.destroyAllWindows()
 
 #
@@ -51,29 +53,10 @@ y = img_base.shape[0]
 
 #
 
-# image = cv2.circle(img_base, (int(x / 2), int(y / 2)), int(x / 6), (225, 225, 225), 8)
-# image = cv2.circle(img_base, (int(x / 2), int(y / 2)), int(x / 6), (255, 255, 255), -1)
-# cv2.imshow("Dominans szin", img_base)
-# cv2.waitKey(0)
-
-#
-
-#cv2.destroyAllWindows()
-#time.sleep(.5)
-#os.remove(f"temp\\_{fileName}")
-
-#
-
-###
-
-#
-
 color_ALAP = ["Piros", "Zold", "Kek", "Ismeretlen"]
 text_ALAP = ["Piros", "Zöld", "Kék", "Ismeretlen"]
 color_RAKTAR = ["Piros: ez a csomag egy torekeny termeket tartalmaz", "Zold: ez a csomag egy romlando termeket tartalmaz", "Kek: ez a csomag egy aeroszolos termeket tartalmaz", "Ismeretlen: nem ismerheto fel megfelelo szin"]
 text_RAKTAR = ["Piros: ez a csomag egy törékeny terméket tartalmaz", "Zöld: ez a csomag egy romlandó terméket tartalmaz", "Kék: ez a csomag egy aeroszolos terméket tartalmaz", "Ismeretlen: nem ismerhető fel megfelelő szín"]
-
-print("\nINDUSTRIA PERITIA ©\nSzínfelismerő Program")
 
 image = img_base
 index = ["color","color_name","hex","R","G","B"]
@@ -148,6 +131,6 @@ while (1):
     if cv2.waitKey(20) & 0xFF == 27:
         break
 
+print() # Utolsó sortörés
 cv2.destroyAllWindows()
-
 
